@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .container {
+            margin: 100px;
+        }
+
+        .real-box {
+            position: relative;
+
+            margin-top: 2rem;
+        }
+
+        .real-box span{
+            margin-left: 1em;
+            line-height: 1em;
+        }
+
+        .ball{
+            width: 10px;
+            height: 10px;
+            margin-top: 3px;
+            background-color: #eeeeee;
+            border-radius: 15px;
+            float: left;
+        }
+
+        .real-box.running {
+            display: block;
+        }
+
+        .running .ball{
+            background-color: #00c6ff;
+        }
+
+        .running .pulse {
+            width: 15px;
+            height: 15px;
+            border-radius: 30px;
+            border: 1px solid #00c6ff;
+            box-shadow: 0 0 5px #00c6ff;
+            position: absolute;
+            top: 0px;
+            left: -3px;
+            -moz-transform: scale(0);
+            -webkit-transform: scale(0);
+
+            -webkit-animation: pulse 1s ease-out;
+            -moz-animation: pulse 1s ease-out;
+        }
+
+        @-moz-keyframes pulse {
+            0% {
+                -moz-transform: scale(0);
+                opacity: 0;
+            }
+            10% {
+                -moz-transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                -moz-transform: scale(1.75);
+                opacity: 0;
+            }
+            100% {
+                -moz-transform: scale(0);
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(0);
+                opacity: 0;
+            }
+            10% {
+                -webkit-transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                -webkit-transform: scale(1.75);
+                opacity: 0;
+            }
+            100% {
+                -webkit-transform: scale(0);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div id="box-1">
+        <div class="real-box">
+            <div class="ball"></div><span>CR1</span>
+            <div class="pulse"></div>
+        </div>
+    </div>
+    <div id="box-2">
+        <div class="real-box">
+            <div class="ball"></div><span>CR2</span>
+            <div class="pulse"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

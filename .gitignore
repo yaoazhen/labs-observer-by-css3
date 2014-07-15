@@ -1,0 +1,15 @@
+.project
+.settings
+.externalToolBuilders
+.idea
+.DS_Store
+.orig
+*.log
+
+dist
+release
+tmp
+css
+node_modules
+bower_components
+screenshots
